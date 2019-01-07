@@ -18,7 +18,7 @@ client.connect("iot.eclipse.org", 1883, 60)
 
 while True:
     try:
-        id = 2
+        id = 1
         print("Publish VLCIP/" + str(id) + "/data")
         client.publish("VLCIP/" + str(id) + "/data", id)
         time.sleep(3)
