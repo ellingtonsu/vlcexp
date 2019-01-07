@@ -3,7 +3,7 @@ import paho.mqtt.client as mqtt
 
 def on_BrokerConnect(client, userdata, flags, rc):
     print("Connected with result code " +str(rc))
-    client.subscribe("VLCIP/+/data")
+    client.subscribe("VLCIP/1/data")
     
 def on_BrokerMessage(client, userdata, msg):
     print(msg.topic + " " + str(msg.payload))

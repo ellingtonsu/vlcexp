@@ -8,7 +8,7 @@ def on_VLCConnect(client, userdata, flags, rc):
 
 # Called when publish
 def on_VLCPublish(client, userdata, mid):
-    print("OK")
+    print("Publish OK")
 
 client = mqtt.Client()
 client.on_connect = on_VLCConnect
@@ -18,8 +18,7 @@ client.connect("iot.eclipse.org", 1883, 60)
 
 while True:
     try:
-        id = 2
-        print("Publish VLCIP/" + str(id) + "/data")
+        id = 1
         client.publish("VLCIP/" + str(id) + "/data", id)
         time.sleep(3)
     except KeyboardInterrupt:
